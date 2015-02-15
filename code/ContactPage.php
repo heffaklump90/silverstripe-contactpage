@@ -45,7 +45,7 @@ class ContactPage_Controller extends Page_Controller
 	    $fields = new FieldList(
 		    new TextField('Name', 'Name*'),
 			new EmailField('Email', 'Email*'),
-			new TextareaField('Comments','Comments*')
+			new TextareaField('Comments','Mitteilung*')
 		);
 	 	
 	    // Create action
@@ -54,13 +54,13 @@ class ContactPage_Controller extends Page_Controller
 				    );
 	    
 	    // Create action
-	    $validator = new RequiredFields('Name', 'Email', 'Comments');
+ 	    $validator = new RequiredFields('Name', 'Email', 'Comments');
 	    
-	    $form = new Form($this, 'ContactForm', $fields, $actions, $validator);
+ 	    $form = new Form($this, 'ContactForm', $fields, $actions, $validator);
 	    
-	    SpamProtectorManager::update_form($form, 'Message');
+// 	    SpamProtectorManager::update_form($form, 'Message');
 
-	    return $form;
+ 	    return $form;
 	}
  	
 	//The function that handles our form submission
