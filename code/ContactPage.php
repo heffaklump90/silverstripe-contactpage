@@ -12,7 +12,7 @@
 //Model
 class ContactPage extends Page
 {
-	static $db = array(
+	private static $db = array(
 		'Mailto' => 'Varchar(100)', //Email address to send submissions to
 		'SubmitText' => 'HTMLText' //Text presented after submitting message
 	);
@@ -34,8 +34,8 @@ class ContactPage extends Page
 class ContactPage_Controller extends Page_Controller
 {
 	//Define our form function as allowed
-	static $allowed_actions = array(
-		'ContactForm'
+	private static $allowed_actions = array(
+		'Form'
 	);
 	
 	//The function which generates our form
