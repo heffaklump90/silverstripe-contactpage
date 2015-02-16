@@ -3,7 +3,7 @@
  * 
  * ContactPage
  * 
- * Tutorial on www.ssbits.com/creating-a-simple-contact-form/
+ * Tutorial on www.ssbits.com/creating-a-simple-contact-ContactForm/
  * 
  * Author: Aram Balakjian of aabweb.co.uk
  * 
@@ -33,13 +33,13 @@ class ContactPage extends Page
 // Controller
 class ContactPage_Controller extends Page_Controller
 {
-	//Define our form function as allowed
+	//Define our ContactForm function as allowed
 	private static $allowed_actions = array(
-		'Form'
+		'ContactForm'
 	);
 	
-	//The function which generates our form
-	function Form() 
+	//The function which generates our ContactForm
+	function ContactForm() 
 	{
       	// Create fields
 	    $fields = new FieldList(
@@ -58,13 +58,13 @@ class ContactPage_Controller extends Page_Controller
 	    
  	    $form = new Form($this, 'ContactForm', $fields, $actions, $validator);
 	    
-// 	    SpamProtectorManager::update_form($form, 'Message');
+// 	    SpamProtectorManager::update_Form($form, 'Message');
 
  	    return $form;
 	}
  	
-	//The function that handles our form submission
-	function SendContactForm($data, $form) 
+	//The function that handles our ContactForm submission
+	function SendContactForm($data, $ContactForm) 
 	{
 	 	//Set data
 		$From = $data['Email'];

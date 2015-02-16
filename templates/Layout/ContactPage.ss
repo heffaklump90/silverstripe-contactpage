@@ -4,7 +4,7 @@
 		$SubmitText
 	<% else %>
 		$Content
-		$Form
+		$ContactForm
 	<% end_if %>
 	
 </div>
