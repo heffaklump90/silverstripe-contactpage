@@ -3,10 +3,6 @@
  * 
  * ContactPage
  * 
- * Tutorial on www.ssbits.com/creating-a-simple-contact-ContactForm/
- * 
- * Author: Aram Balakjian of aabweb.co.uk
- * 
  ******************/
 
 //Model
@@ -16,6 +12,8 @@ class ContactPage extends Page
 		'Mailto' => 'Varchar(100)', //Email address to send submissions to
 		'SubmitText' => 'HTMLText' //Text presented after submitting message
 	);
+	
+	
 	
 	//CMS fields
 	function getCMSFields() 
@@ -27,12 +25,29 @@ class ContactPage extends Page
 	
 		return $fields;	
 	}
+	
 
 }
 
 // Controller
 class ContactPage_Controller extends Page_Controller
-{
+{	
+	private static $nameCaption = 'Name*';
+	private static $emailCaption = 'Email*';
+	private static $mesageFieldCaption = 'Message*';
+	
+	public static function setNameCaption( $nameCaption ){
+		self::$nameCaption = $nameCaption;
+	}
+	
+	public static function setEmailCaption( $emailCaption ){
+		self::$emailCaption = $emailCaption;
+	}
+	
+	public static function setMessageFieldCaption( $messageFieldCaption ){
+		self::$mesageFieldCaption = $messageFieldCaption;
+	}
+	
 	//Define our ContactForm function as allowed
 	private static $allowed_actions = array(
 		'ContactForm'
@@ -43,9 +58,9 @@ class ContactPage_Controller extends Page_Controller
 	{
       	// Create fields
 	    $fields = new FieldList(
-		    new TextField('Name', 'Name*'),
-			new EmailField('Email', 'Email*'),
-			new TextareaField('Comments','Mitteilung*')
+		    new TextField('Name', self::$nameCaption),
+			new EmailField('Email', self::$emailCaption),
+			new TextareaField('Comments',self::$mesageFieldCaption)
 		);
 	 	
 	    // Create action
