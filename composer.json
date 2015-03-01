@@ -1,7 +1,7 @@
 {
 	"name": "heffaklump90/contactpage",
 	"description": "Simple web form for onpage mailing",
-	"type": "silverstrpie-module",
+	"type": "silverstripe-module",
 	"require": {
 		"composer/installers": "~1.0"	
 	},
