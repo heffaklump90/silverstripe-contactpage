@@ -3,8 +3,8 @@
 	"description": "Simple web form for onpage mailing",
 	"type": "silverstrpie-module",
 	"require": {
-		
-	}
+		"composer/installers": "~1.0"	
+	},
 	"config": {
 		"process-timeout": 600	
 	}
