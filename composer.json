@@ -3,6 +3,5 @@
 	"description": "Simple web form for onpage mailing",
 	"config": {
 		"process-timeout": 600	
-	},
-	"minimum-stability": "dev"
+	}
 }
