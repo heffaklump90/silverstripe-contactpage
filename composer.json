@@ -1,4 +1,8 @@
 {
 	"name": "heffaklump90/contactpage",
-	"description": "Simple web form for onpage mailing"
+	"description": "Simple web form for onpage mailing",
+	"config": {
+		"process-timeout": 600	
+	},
+	"minimum-stability": "dev"
 }
