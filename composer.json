@@ -1,6 +1,10 @@
 {
 	"name": "heffaklump90/contactpage",
 	"description": "Simple web form for onpage mailing",
+	"type": "silverstrpie-module",
+	"require": {
+		
+	}
 	"config": {
 		"process-timeout": 600	
 	}
