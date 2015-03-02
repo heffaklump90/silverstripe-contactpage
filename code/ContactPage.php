@@ -73,8 +73,8 @@ class ContactPage_Controller extends Page_Controller
 	    
  	    $form = new Form($this, 'ContactForm', $fields, $actions, $validator);
 	    
- 	    if(ClassInfo::exists('SpamProtectorManager')) {
-	 	    SpamProtectorManager::update_Form($form, 'Message');
+ 	    if($form->hasExtension('FormSpamProtectionExtension')) {
+ 	    	$form->enableSpamProtection(  );
  	    }
  	    
  	    return $form;
